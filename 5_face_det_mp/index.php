@@ -14,7 +14,7 @@ session_destroy();
 		<p>まず画像をアップロードします。<br>
 		その後でアップロードした画像から顔検出をする<br>
 		というデモプログラム(Webアプリケーション)です。<br>
-		動的なWebの処理はPHPで、画像処理部はPython(OpenCV)で動作しています。</p>
+		動的なWebの処理はPHPで、画像処理部はPython(MediaPipe)で動作しています。</p>
 		<p><br></p>
 		<p>画像を指定：<input type="file" name="upfile"></p>
 		<p><input type="submit" value="アップロード"></p>
