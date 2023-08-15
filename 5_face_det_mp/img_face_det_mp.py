@@ -10,7 +10,6 @@ img = cv2.imread(sys.argv[1], cv2.IMREAD_COLOR) # 画像読み込み
 ch, cw, _ = img.shape # 画像サイズ取得
 
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # グレースケール変換
-faces = face_det.detectMultiScale(img_gray) # 顔検出
 
 results = face_detection.process(cv2.cvtColor(img, cv2.COLOR_BGR2RGB)) # mediapipeに処理を渡す
 if results.detections:

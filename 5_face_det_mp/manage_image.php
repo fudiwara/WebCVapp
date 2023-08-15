@@ -2,9 +2,9 @@
 session_start();
 
 if( !empty($_POST["proc_fdet"]) ){ // 「顔検出」ボタンを押してリロードする時の処理：顔検出本体
-	$com = "python3 img_face_det.py ". $_SESSION["proc_target_file_name"];
+	$com = "python3 img_face_det_mp.py ". $_SESSION["proc_target_file_name"];
 	exec($com, $dst_filename, $ret); // execでpythonの処理を実行
-	$_SESSION["dst_filename"] = $dst_filename[1]; // 実行結果で標準出力されたファイル名を得る (mp用)
+	$_SESSION["dst_filename"] = $dst_filename[0]; // 実行結果で標準出力されたファイル名を得る (mpも0)
 	$_SESSION["flag_dst"] = true;
 
 }else{ // 最初に開く時点での処理：画像のアップロード
