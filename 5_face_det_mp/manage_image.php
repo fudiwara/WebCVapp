@@ -44,14 +44,14 @@ if( $_SESSION["flag_upload"] ){ // ファイルアップロードが完了して
 	</form>
 <?php
 }
-if( !empty($_SESSION["flag_dst"]) ){ // ファイルアップロードが完了している場合
+if( !empty($_SESSION["flag_dst"]) ){ // 画像処理が完了している場合
 ?>
 	<p>顔検出の結果 ↓↓<br>
 	<img src="<?= $_SESSION["dst_filename"] ?>"></p>
 
 <?php
 }
-if( !$_SESSION["flag_upload"] ){ // ファイルアップロードが完了している場合
+if( !$_SESSION["flag_upload"] ){ // ファイルアップロードが失敗した場合
 ?>
 	<p>アップロードは失敗しました。</p>
 <?php
