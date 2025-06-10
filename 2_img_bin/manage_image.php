@@ -2,7 +2,6 @@
 session_start();
 
 if( !empty($_POST["proc_bin"]) ){ // 「2値化処理」ボタンを押してリロードする時の処理：2値化処理本体
-	
 	if($_POST["bin_high_low"] == "high"){ // ラジオボタンのpostにあわせてコマンドライン引数を変える
 		$bin_flag = 1;
 	}else{
@@ -12,7 +11,6 @@ if( !empty($_POST["proc_bin"]) ){ // 「2値化処理」ボタンを押してリ
 	exec($com, $dst_filename, $ret); // execでpythonの処理を実行
 	$_SESSION["dst_filename"] = $dst_filename[0]; // 実行結果で標準出力されたファイル名を得る
 	$_SESSION["flag_dst"] = true;
-
 }else{ // 最初に開く時点での処理：画像のアップロード
 	$tmp_file_name = $_FILES["upfile"]["tmp_name"]; // POSTで得た仮のファイル名
 	$src_file_name = $_FILES["upfile"]["name"]; // 元のファイル名
